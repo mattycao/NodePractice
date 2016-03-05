@@ -1,0 +1,23 @@
+<!--
+By using the with statement, we can push the new variable object to the front of the scope chaining.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ob = {};
+    ob.name = 'Dong';
+    function changeName() {
+        var name = 'feng';
+        with(ob) {
+            console.log(name);
+        }
+    }
+    changeName();
+</script>
+</body>
+</html>
